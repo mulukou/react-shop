@@ -29,7 +29,7 @@ const Home: NextPage = () => {
   );
 
   useEffect(() => {
-    axios.get("http://localhost:1323/items").then((res) => {
+    axios.get(`${process.env.GO_BACKEND_URL}/items`).then((res) => {
       setItems(res.data);
     });
   }, [itemCheck]);

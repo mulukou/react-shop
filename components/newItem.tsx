@@ -41,7 +41,7 @@ function uploadItem(form: {
   formData.append("price", `${form.price}`);
   formData.append("picture", form.picture);
 
-  axios.post("http://localhost:1323/upload", formData, {
+  axios.post(`${process.env.GO_BACKEND_URL}/upload`, formData, {
     headers: {
       "Content-Type": "multipart/form-data",
       Authorization: `Bearer ${Cookies.get("token")}`,

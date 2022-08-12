@@ -35,7 +35,7 @@ async function loginFunc(loginForm: { username: string; password: string }) {
   formData.append("username", loginForm.username);
   formData.append("password", loginForm.password);
 
-  const req = await axios.post("http://localhost:1324/login", formData, {
+  const req = await axios.post(`${process.env.GO_LOGIN_URL}/login`, formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
