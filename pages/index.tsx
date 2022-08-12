@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import axios from "axios";
-import StoreItem from "./components/storeItem";
+import StoreItem from "../components/storeItem";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { createContext, useState, useMemo, useEffect } from "react";
-import NewItem from "./components/newItem";
-import Login from "./components/login";
+import NewItem from "../components/newItem";
+import Login from "../components/login";
 interface Props {
   items?: {
     ID: number;
