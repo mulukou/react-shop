@@ -5,17 +5,6 @@ import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { createContext, useState, useMemo, useEffect } from "react";
 import NewItem from "../components/newItem";
 import Login from "../components/login";
-interface Props {
-  items?: {
-    ID: number;
-    Title: string;
-    Description: string;
-    Picture: string;
-    Price: number;
-  }[];
-  token?: string | undefined;
-  error?: unknown;
-}
 
 const Home: NextPage = () => {
   const [login, setLogin] = useState(false);
